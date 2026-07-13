@@ -1,12 +1,12 @@
 # Contents
 
 This repository contains the bootloader source code for the WatchGuard:
-* T20 (LS1023A @ 1.0GHz)
-* T25 (LS1043A @ 1.0GHz)
-* T40 (LS1043A @ 1.0GHz)
-* T45 (LS1043A @ 1.6GHz)
-* T80 (LS1046A @ 1.2GHz)
-* T85 (LS1046A @ 1.8GHz)
+* Firebox T20 (LS1023A @ 1.0GHz)
+* Firebox T25 (LS1043A @ 1.0GHz)
+* Firebox T40 (LS1043A @ 1.0GHz)
+* Firebox T45 (LS1043A @ 1.6GHz)
+* Firebox T80 (LS1046A @ 1.2GHz)
+* Firebox T85 (LS1046A @ 1.8GHz)
 
 # Requesting source code
 
