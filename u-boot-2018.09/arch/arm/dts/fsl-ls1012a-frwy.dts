@@ -1,0 +1,63 @@
+// SPDX-License-Identifier: GPL-2.0+ OR X11
+/*
+ * NXP ls1012a FRWY board device tree source
+ *
+ * Copyright 2018 NXP
+ *
+ */
+
+/dts-v1/;
+#include "fsl-ls1012a.dtsi"
+
+/ {
+	model = "FRWY-LS1012A Board";
+
+	aliases {
+		spi0 = &qspi;
+	};
+
+	chosen {
+		stdout-path = &duart1;
+	};
+
+	switch@000000{
+			compatible = "marvell,mv88e6xxx";
+			status = "okay";
+			phy-addr = <0x6>;
+			cpu-port = <0x0>;
+			port-mask = <0x4e1>;
+			fix-port = <0xa>;
+			led-mode = <0x22>;
+		};
+};
+
+&qspi {
+	bus-num = <0>;
+	status = "okay";
+
+	qflash0: mx25u3235f@0 {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "spi-flash";
+		spi-max-frequency = <20000000>;
+		reg = <0>;
+	};
+};
+
+&i2c0 {
+	status = "okay";
+	
+	rtc@30 {
+		compatible = "sii,s35392a-rtc";
+		reg = <0x30>;
+	};
+
+};
+
+&duart0 {
+	status = "okay";
+};
+
+&duart1 {
+	status = "okay";
+};
